@@ -12,14 +12,17 @@ Keep taking numbers as inputs till the user enters ‘x’, after that print sum
 
 public class Main {
     public static void main(String[] args) {
-       Scanner sc = new Scanner(System.in);
-       String name = sc.next();
-        switch (name) {
-            case "Rahul" -> System.out.println("Hi Rahul How are you man");
-            case "Manoj" -> System.out.println("Hi Manoj How are you man");
-            case "Sohail" -> System.out.println("Hi Sohail");
-            default -> System.out.println("yes I am man");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Pls Provide the number");
+        while (true) {
+            int num = scanner.nextInt();
+
+            char userEnter = scanner.next().toLowerCase().trim().charAt(0);
+            if (userEnter=='x'){
+                break;
+            }
         }
     }
 }
+
 
