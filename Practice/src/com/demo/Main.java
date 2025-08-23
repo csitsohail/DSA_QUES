@@ -1,6 +1,8 @@
 package com.demo;
 
 import java.util.Scanner;
+
+
 /*
 Create flowchart and pseudocode for the following:
 Input a year and find whether it is a leap year or not.
@@ -11,18 +13,25 @@ Keep taking numbers as inputs till the user enters ‘x’, after that print sum
 */
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Pls Provide the number");
-        while (true) {
-            int num = scanner.nextInt();
 
-            char userEnter = scanner.next().toLowerCase().trim().charAt(0);
-            if (userEnter=='x'){
-                break;
-            }
+
+    public static void main(String[] args) {
+        for (int i = 0; i <1000; i++) {
+            arm(i);
         }
     }
+        static void arm ( int val) {
+            int num = val;
+            int news = 0;
+            while (num > 0) {
+                int rem = num % 10;
+                rem = rem * rem * rem;
+                news = news + rem;
+                num = num / 10;
+            }
+            if (news==val){
+            System.out.println(news);
+        }}
 }
 
 
